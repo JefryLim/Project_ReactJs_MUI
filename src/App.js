@@ -2,7 +2,7 @@
 function App() {
   return (
     <div>
-      Hai Testing
+      Sekarang berubah jadi yang baru
     </div>
   );
 }
