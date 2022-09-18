@@ -1,49 +1,22 @@
-import { Button, styled } from "@mui/material";
+
+import Rightbar from "./components/Rightbar";
+import Sidebar from "./components/Sidebar";
+import Feedbar from "./components/Feedbar";
+import { Box } from "@mui/material";
+import { Stack } from "@mui/system";
+import Navbar from "./components/Navbar";
 
 function App() {
 
-  const BlueButton = styled(Button)(({theme})=>({
-    backgroundColor: theme.palette.otherColor.main,
-    color: "#888",
-    margin: 5,
-    "&:hover": {
-      backgroundColor: "lightblue",
-    },
-    "&:disabled": {
-      backgroundColor: "gray",
-      color: "white",
-    }
-  }));
-
   return (
-    <div>
-      <Button variant="text" >Text</Button>
-      <Button variant="contained" color="primary">Contained</Button>
-      <Button variant="outlined" color="primary">Outlined</Button>
-      <Button href="#text-buttons">Link</Button>
-      <Button variant="contained" size="small" disableElevation>
-        Disable elevation
-      </Button>
-
-      <Button variant="contained" sx={{
-        backgroundColor: "skyblue",
-        color: "#888",
-        margin: 5,
-        "&:hover": {
-          backgroundColor: "lightblue",
-        },
-        "&:disabled": {
-          backgroundColor: "gray",
-          color: "white",
-        }
-      }}>
-        wew
-      </Button>
-
-      <BlueButton>
-        wew 2
-      </BlueButton>
-    </div>
+    <Box>
+      <Navbar/>
+      <Stack direction="row" spacing={2} justifyContent="space-evenly">
+        <Sidebar />
+        <Feedbar />
+        <Rightbar />
+      </Stack>
+    </Box>
   );
 }
 
